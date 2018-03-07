@@ -43,11 +43,23 @@ waiting
 
 This example tells `org-sync` to run continuously, checking the private slack room `#capture` for updates every 5 seconds and replicates the entire history for that room into the local folder `~/notes/slack-capture`. You can leave off the `--monitor` flag and it will just do a single sync of that channel and then exit.
 
+The output from this example looks like this:
+```
+$ tree ~/notes/slack-capture/
+/Users/ddcmhenry/notes/slack-capture/
+├── cache
+│   └── F9K2L6UP4.jpg
+├── capture.org
+└── sync-state
+```
+
+The `sync-state` file contains information about when the conversation was synced last. The `cache` is where file objects like images are stored. The `capture.org` file is named after the channel it was synced from, and contains the main content of the channel with links to the file objects stored in `cache`.
+
 Here is a screenshot of the `#capture` group in Slack:
 
 ![slack-screenshot](doc/slack-screenshot.png)
 
-Here is the same `#capture` channel in emacs `org-mode` a few seconds later:
+Here is the same `#capture` channel in emacs `org-mode` after it has been synced:
 
 ![emacs-screenshot](doc/emacs-screenshot.png)
 
