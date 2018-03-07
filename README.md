@@ -37,7 +37,7 @@ $ JAR='target/org-sync-*-standalone.jar'
 $ API_TOKEN='XXX'
 $ java -jar $JAR --api-token $API_TOKEN --group 'capture' --output-dir ~/notes/slack-capture --monitor --interval 5000
 changes detected since  nil : latest is 1520423747.000227
-get-cached-file: fetching https://files.slack.com/files-pri/T02LRKTL7-F9K2L6UP4/image_uploaded_from_ios.jpg -> file:/Users/ddcmhenry/notes/slack-capture/cache/F9K2L6UP4.jpg
+get-cached-file: fetching https://files.slack.com/files-pri/T02LRKTL7-F9K2L6UP4/image_uploaded_from_ios.jpg -> file:~/notes/slack-capture/cache/F9K2L6UP4.jpg
 waiting
 ```
 
@@ -46,7 +46,7 @@ This example tells `org-sync` to run continuously, checking the private slack ro
 The output from this example looks like this:
 ```
 $ tree ~/notes/slack-capture/
-/Users/ddcmhenry/notes/slack-capture/
+~/notes/slack-capture/
 ├── cache
 │   └── F9K2L6UP4.jpg
 ├── capture.org
