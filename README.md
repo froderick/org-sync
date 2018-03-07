@@ -45,11 +45,11 @@ This example tells `org-sync` to run continuously, checking the private slack ro
 
 Here is a screenshot of the `#capture` group in Slack:
 
-![slack-screenshot](#docs/slack-screenshot.png)
+![slack-screenshot](doc/slack-screenshot.png)
 
 Here is the same `#capture` channel in emacs `org-mode` a few seconds later:
 
-![emacs-screenshot](#docs/emacs-screenshot.png)
+![emacs-screenshot](doc/emacs-screenshot.png)
 
 *Success!*
 
