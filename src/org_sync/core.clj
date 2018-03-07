@@ -6,21 +6,7 @@
   versions of the referenced conversation files.
 
   Calls the `slack` ns to fetch channel data, calls the `org` ns to generate org
-  files from it.
-
-  Remaining Feature Ideas
-  -----------------------
-  - tolerate API throttling by just pausing and resuming operations
-  - install via brew
-  - support org links in text
-  - support org code blocks
-  - make the logging output better formatted, with more helpful information about what it is doing
-  - send a desktop notification when new changes are picked up?
-  - put a log file somewhere for debugging when deployed
-  - do proper oauth, don't just depend on developer keys
-  - fully automate the setup of the client in such that setting it up in a team is trivial
-  - clean up missing specs and tests for side-effecting things
-  "
+  files from it."
   (:require [clojure.pprint :refer [pprint]]
             [clojure.spec.alpha :as s]
             [clojure.java.io :as io]
