@@ -87,8 +87,13 @@ Here are some points of advice for getting this to work:
     ```
     
 ## Known Issues
-### Rate Limiting
+#### Rate Limiting
 This program doesn't deal gracefully if the slack history is large and many pages of messages must be fetched. The Slack API rate limits permit bursting, but after a short while will throttle the program to roughly 1 request per second. In the future I'd like to make it tolerate this with backoffs and retries, but it hasn't really presented a problem for me yet.
+
+#### Images in Org Mode
+It can be a pain on MacOS to set up emacs with org-mode image support correctly. I did it this way, but I haven't reproduced this from scratch to make sure I'm not missing a step: `brew install emacs --with-cocoa --with-gnutls --with-librsvg --with-imagemagick@6`. If that doesn't work, you may need to explicitly install that version of `imagemagick`.
+
+The other thing about images in `org-mode` is that they don't show by default. If you're using the defaults, you will need to invoke `M-x org-display-inline-images` after loading the org file with images into a buffer.
 
 ## Feature Ideas
 - tolerate API throttling with backoffs and retries
